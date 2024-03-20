@@ -71,10 +71,9 @@ image: https://images.unsplash.com/photo-1536995769641-12e9f98fd223?q=80&w=2487&
 ---
 title: Premiers pas avec JavaScript
 layout: center
-class: text-center
 ---
 
-# Hello, World
+<h1 class="text-center">Hello, World</h1> 
 ````md magic-move
 ```js
 console.log('Hello, World!');
@@ -108,3 +107,38 @@ console.log(x);
 
 <p v-click="'+1'">Pourquoi ?</p>
 <img v-click="'+1'" src="/assets/images/ManonSofaWellness.jpg" class="m-auto h-60 rounded shadow" />
+
+---
+title: var exemple 
+layout: center
+class: h-100
+---
+
+# Un peu d'explication :
+
+---
+transition: fade-out
+layout: center
+---
+
+<div  v-mark="{at: 1, color: 'teal', type: 'highlight'}">var: peut être re-déclarée et mise à jour</div>
+<div v-click="2" v-mark="{at: 2, color: 'teal', type: 'highlight'}"  class="text-center">let et const : peut être mise à jour mais <span v-mark="{at: 2, color: '#BE4165', type: 'strike-through'}">pas re-déclarée</span></div>
+
+```js {monaco-run}
+// var: peut être re-déclarée et mise à jour
+var greeting = "Hello";
+var greeting = "Bonjour"; // Re-déclaration valide
+console.log(greeting); // "Bonjour"
+
+// let et const: peut être mise à jour mais pas re-déclarée
+let greeting2 = "Hello";
+//let greeting2 = "Hola";
+greeting2 = "Bonjour"; 
+```
+---
+
+<div v-click="4" v-mark="{at: 5, color: 'teal', type: 'strike-through'}">Le scope de la variable est le bloc d'instructions</div>
+```js {monaco-run}
+const greeting3 = "Hello";
+//greeting3 = "Bonjour"; 
+```
