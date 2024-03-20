@@ -43,9 +43,6 @@ Clé de l'interactivité, dynamise le web, essentiel pour une carrière en déve
 # Sommaire
 <Toc minDepth="1" maxDepth="2"></Toc>
 
-
----
-
 ---
 layout: image-right
 image: https://images.unsplash.com/photo-1536995769641-12e9f98fd223?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
@@ -108,3 +105,6 @@ class: text-center
 let x = 42;
 console.log(x);
 ```
+
+<p v-click="'+1'">Pourquoi ?</p>
+<img v-click="'+1'" src="/assets/images/ManonSofaWellness.jpg" class="m-auto h-60 rounded shadow" />
