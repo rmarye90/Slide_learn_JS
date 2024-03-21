@@ -113,7 +113,7 @@ title: var exemple #1
 transition: fade-out
 ---
 
-# Un peu d'explication :
+# Un peu d'explication #1:
 
 <div  v-mark="{at: 1, color: 'teal', type: 'highlight'}">var: peut être re-déclarée et mise à jour</div>
 <div v-click="2" v-mark="{at: 2, color: 'teal', type: 'highlight'}">let et const : peut être mise à jour mais <span v-mark="{at: 2, color: '#BE4165', type: 'strike-through'}">pas re-déclarée</span></div>
@@ -124,7 +124,7 @@ var greeting = "Hello";
 var greeting = "Bonjour"; // Re-déclaration valide
 console.log(greeting); // "Bonjour"
 
-// let et const: peut être mise à jour mais pas re-déclarée
+// let et const: peuvent être mise à jour mais pas re-déclarées
 let greeting2 = "Hello";
 //let greeting2 = "Hola";
 greeting2 = "Bonjour"; 
@@ -134,10 +134,9 @@ title: var exemple #2
 transition: fade-out
 ---
 
-# Un peu d'explication :
+# Un peu d'explication #2:
 
-<div v-click="0" v-mark="{at: 5, color: 'teal', type: 'strike-through'}">Le scope de la variable est le bloc d'instructions</div>
-<div v-click="2" v-mark="{at: 2, color: 'teal', type: 'highlight'}">let et const : peut être mise à jour mais <span v-mark="{at: 2, color: '#BE4165', type: 'strike-through'}">pas re-déclarée</span></div>
+<div v-click="0" v-mark="{at: 1, color: 'teal', type: 'highlight'}">Le scope de la variable est le bloc d'instructions</div>
 <div class="flex w-220 gap-2">
     <div class="w-1/2">
 ```js {monaco-run}
@@ -168,3 +167,46 @@ testLet();
 ```
     </div>
 </div>
+
+
+---
+title: var exemple #3
+transition: fade-out
+---
+
+# Un peu d'explication #3:
+
+<div v-click="0" v-mark="{at: 5, color: 'teal', type: 'highlight'}">Le Hoisting</div>
+```js {monaco-run}
+console.log(a); // var a; 
+var a = 3;
+
+let b = 3;
+
+const c = 3;
+```
+
+
+---
+title: var exemple #4
+transition: fade-out
+---
+
+# Un peu d'explication #4:
+
+<div v-click="0" v-mark="{at: 1, color: 'teal', type: 'highlight'}">Le scope encore</div>
+```js {monaco-run} {autorun:false}
+// var dans une boucle for
+for (var i = 0; i < 3; i++) {
+  console.log(i); // 0, 1, 2
+}
+
+console.log(i); // 3, `i` est accessible en dehors de la boucle
+console.log('-------------------------');
+// let dans une boucle for
+for (let j = 0; j < 3; j++) {
+  console.log(j); // 0, 1, 2
+}
+
+/* console.log(j); Erreur: j is not defined, `j` n'est pas accessible en dehors de la boucle */
+```
