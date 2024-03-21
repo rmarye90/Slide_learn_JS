@@ -74,18 +74,17 @@ layout: center
 ---
 
 <h1 class="text-center">Hello, World</h1> 
-````md magic-move
-```js
+```js {monaco-run} {autorun:false}
 console.log('Hello, World!');
 ```
+<v-click at="+1">
 ```js
 console.log('Hello, World!');
 console.info('Hello, World!');
 console.error('Hello, World!');
-console.debug('Hello, World!');
 console.warning('Hello, World!');
 ```
-````
+</v-click>
 <!-- throw new Error() pour signaler des erreurs qui doivent interrompre l'exécution d'un bloc de code.
 
 catch(error) pour gérer de manière élégante les erreurs qui peuvent être récupérées.
@@ -176,7 +175,7 @@ transition: fade-out
 
 # Un peu d'explication #3:
 
-<div v-click="0" v-mark="{at: 5, color: 'teal', type: 'highlight'}">Le Hoisting</div>
+<div v-click="0" v-mark="{at: 1, color: 'teal', type: 'highlight'}">Le Hoisting</div>
 ```js {monaco-run}
 console.log(a); // var a; 
 var a = 3;
