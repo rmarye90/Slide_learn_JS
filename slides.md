@@ -109,20 +109,14 @@ console.log(x);
 <img v-click="'+1'" src="/assets/images/ManonSofaWellness.jpg" class="m-auto h-60 rounded shadow" />
 
 ---
-title: var exemple 
-layout: center
-class: h-100
+title: var exemple #1 
+transition: fade-out
 ---
 
 # Un peu d'explication :
 
----
-transition: fade-out
-layout: center
----
-
 <div  v-mark="{at: 1, color: 'teal', type: 'highlight'}">var: peut être re-déclarée et mise à jour</div>
-<div v-click="2" v-mark="{at: 2, color: 'teal', type: 'highlight'}"  class="text-center">let et const : peut être mise à jour mais <span v-mark="{at: 2, color: '#BE4165', type: 'strike-through'}">pas re-déclarée</span></div>
+<div v-click="2" v-mark="{at: 2, color: 'teal', type: 'highlight'}">let et const : peut être mise à jour mais <span v-mark="{at: 2, color: '#BE4165', type: 'strike-through'}">pas re-déclarée</span></div>
 
 ```js {monaco-run}
 // var: peut être re-déclarée et mise à jour
