@@ -209,3 +209,96 @@ for (let j = 0; j < 3; j++) {
 
 /* console.log(j); Erreur: j is not defined, `j` n'est pas accessible en dehors de la boucle */
 ```
+
+---
+title: functions 
+---
+
+# Les fonctions
+
+````md magic-move
+```js
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add(2, 3));
+```
+
+```js
+const add = (a, b) => {
+  return a + b;
+}
+
+console.log(add(2, 3));
+```
+
+```js
+const addShorter = (a, b) => a + b;
+
+console.log(addShorter(2, 3));
+```
+````
+
+<v-click at="+1">
+
+<br />
+
+#### Ce qu'il faut retenir :
+
+Les fonctions nous aident à réutiliser des morceaux de code sans avoir à le réécrire.
+Il y a différentes manières d'écrire des fonctions, mais elles visent toutes à accomplir une tâche.
+
+</v-click>
+
+
+<br />
+
+---
+title: Les tableaux
+---
+
+# Les tableaux
+
+````md magic-move
+```js
+const names = new Array('Le meilleur des mondes', 'Crime et Chatiment', 'Le proces', 'Les nuits blanche');
+```
+
+```js
+const livres = ['Le meilleur des mondes', 'Crime et Chatiment', 'Le proces', 'Les nuits blanche'];
+
+console.log(livres[3]); // Accède au quatrième livre: Les nuits blanche 
+```
+````
+<br />
+
+<v-click at="+1">
+
+#### A quoi sert le tableau ?
+Les tableaux en JavaScript stockent des collections d'éléments sous une même variable, permettant d'organiser, d'accéder, et de manipuler ces données grâce à des indices.
+
+</v-click>
+
+---
+
+<v-click at="+1">
+## Le mot clef `this`
+
+* Le this en JavaScript fait référence à l'objet qui est en train d'exécuter le code courant, servant à accéder à ses propriétés et méthodes.
+</v-click>
+<br />
+<v-click at="+1">
+## Contexte de this :
+
+* Fonctions Traditionnelles : this varie selon comment la fonction est appelée.
+* Arrow Functions : this est fixé au contexte de déclaration, sans propre this.
+
+</v-click>
+<br />
+<v-click at="+1">
+## Hoisting :
+
+* Fonctions Traditionnelles : Déclarations hoistées, utilisables avant leur définition.
+* Arrow Functions : Doivent être déclarées avant utilisation, pas de hoisting.
+</v-click>
