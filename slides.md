@@ -130,9 +130,41 @@ let greeting2 = "Hello";
 greeting2 = "Bonjour"; 
 ```
 ---
+title: var exemple #2
+transition: fade-out
+---
 
-<div v-click="4" v-mark="{at: 5, color: 'teal', type: 'strike-through'}">Le scope de la variable est le bloc d'instructions</div>
+# Un peu d'explication :
+
+<div v-click="0" v-mark="{at: 5, color: 'teal', type: 'strike-through'}">Le scope de la variable est le bloc d'instructions</div>
+<div v-click="2" v-mark="{at: 2, color: 'teal', type: 'highlight'}">let et const : peut être mise à jour mais <span v-mark="{at: 2, color: '#BE4165', type: 'strike-through'}">pas re-déclarée</span></div>
+<div class="flex w-220 gap-2">
+    <div class="w-1/2">
 ```js {monaco-run}
-const greeting3 = "Hello";
-//greeting3 = "Bonjour"; 
+// var: portée de fonction
+function testVar() {
+  var x = 1;
+  if (true) {
+    var x = 2; // Même variable !
+    console.log(x); // 2
+  }
+  console.log(x); // 2
+}
+testVar();
 ```
+    </div>
+    <div class="w-1/2">
+```js {monaco-run}
+// let: portée de bloc
+function testLet() {
+  let y = 1;
+  if (true) {
+    let y = 2; // Variable différente
+    console.log(y); // 2
+  }
+  console.log(y); // 1
+}
+testLet();
+```
+    </div>
+</div>
