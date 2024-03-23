@@ -1,15 +1,13 @@
 ---
-layout: cover
-theme: seriph
-background: none
-title: Les Fondamentaux de JavaScript
 author: Florian Beaumont
-download: false
+layout: center
 highlighter: shiki
+css: unocss
+colorSchema: dark
+transition: fade-out
+mdc: true
 drawings:
   persist: false
-transition: slide-left
-mdc: true
 fonts:
   sans: Roboto
   serif: Roboto Slab
@@ -21,56 +19,40 @@ fonts:
 ## Lancez-vous dans le web dynamique.
 
 ---
-layout: image-right
 title: Bienvenue et Introduction
+height: 100
 image: https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80
 preload: false
 ---
 
 # Objectifs de ce cours
-<div class="h-20">
-    <ListWithDelai :list="['Interactivité', 'Dynamisme', 'Carriere']"/>
+
+<v-clicks>
+
+- Comprendre les fondamentaux de JavaScript 
+- Manipuler le DOM pour l'interactivité
+- Maîtriser les fonctions asynchrones et la récupération de données
+- Principes de clean code en JavaScript
+- Techniques avancées et bonnes pratiques
+
+</v-clicks>
+
+
+
+---
+
+## Pourquoi Javascript ?
+
+<div h-80 flex="~ items-center">
+    <div grid="~ gap-y-4" mt10>
+        <p><span text-2xl v-click="1" class="color-#F7DF1E">Interactivité</span> <span op50 v-click="2"> - JavaScript anime vos pages, créant des interactions immédiates avec l'utilisateur.</span></p>
+        <p><span text-2xl v-click="3" class="color-purple">Flexibilité</span> <span op50 v-click="4"> - JavaScript s'adapte, côté client comme serveur, pour des solutions complètes.</span></p>
+        <p><span text-2xl v-click="5" class="color-#4FC08D">Accessibilité</span> <span op50 v-click="6"> - Supporté universellement, JavaScript assure une expérience fluide sur tous les navigateurs.</span></p>
+    </div>
 </div>
-
-<br />
-<br />
-
-# Importance de JavaScript dans le développement web :
-
-Clé de l'interactivité, dynamise le web, essentiel pour une carrière en développement.
----
-
-# Sommaire
-<Toc minDepth="1" maxDepth="2"></Toc>
-
----
-layout: image-right
-image: https://images.unsplash.com/photo-1536995769641-12e9f98fd223?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
----
-
-# Pourquoi Javascript ?
-<ul>
-    <li v-after>- <span v-mark.underline.orange>Interactivité</span></li>
-    <li v-after>- <span v-mark.circle.teal>Dynamisme</span></li>
-    <li v-after>- <span v-mark="{ color: '#701', type: 'underline' }">Carriere</span></li>
-</ul>
-
-<!-- <v-clicks depth="3"> -->
-<!---->
-<!-- - Item 1 -->
-<!--   - Item 1.1 -->
-<!--     - Item 1.1.1 -->
-<!--         - Item 1.1.2 -->
-<!--   - Item 1.2 -->
-<!-- - Item 2 -->
-<!--   - Item 2.1 -->
-<!--   - Item 2.2 -->
-<!---->
-<!-- </v-clicks> -->
 
 ---
 title: Premiers pas avec JavaScript
-layout: center
 ---
 
 <h1 class="text-center">Hello, World</h1> 
@@ -93,16 +75,20 @@ console.error() pour logger des erreurs ou des informations importantes pour le 
 
 ---
 title: Variables, Types de Données, et Opérations
-layout: center
-class: text-center
 ---
 
+<div grid="~ flex-start">
+
 # Variables et Constantes
-<span v-mark.strike-through.red>`var`</span>, <span v-mark.circle.teal>`let` et `const`</span>
-```js
+<div class="inline-block">
+    <span v-mark.strike-through.red>`var`</span>, <span v-mark.circle.teal>`let` et `const`</span>
+</div>
+
+```js {monaco-run}
 let x = 42;
 console.log(x);
 ```
+</div>
 
 <p v-click="'+1'">Pourquoi ?</p>
 <img v-click="'+1'" src="/assets/images/ManonSofaWellness.jpg" class="m-auto h-60 rounded shadow" />
@@ -118,7 +104,6 @@ transition: fade-out
 <div v-click="2" v-mark="{at: 2, color: 'teal', type: 'highlight'}">let et const : peut être mise à jour mais <span v-mark="{at: 2, color: '#BE4165', type: 'strike-through'}">pas re-déclarée</span></div>
 
 ```js {monaco-run}
-// var: peut être re-déclarée et mise à jour
 var greeting = "Hello";
 var greeting = "Bonjour"; // Re-déclaration valide
 console.log(greeting); // "Bonjour"
@@ -217,27 +202,44 @@ title: functions
 # Les fonctions
 
 ````md magic-move
+```js {hide|1-3|7-10|all}{lines:true}
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add(2, 3));
+
+const addShorter = (a, b) => {
+  return a + b;
+}
+
+console.log(addShorter(2, 3));
+```
+
 ```js
 function add(a, b) {
   return a + b;
 }
 
 console.log(add(2, 3));
-```
 
-```js
-const add = (a, b) => {
-  return a + b;
-}
-
-console.log(add(2, 3));
-```
-
-```js
 const addShorter = (a, b) => a + b;
 
 console.log(addShorter(2, 3));
 ```
+
+```js
+function add(a) {
+  return a + 4;
+}
+
+console.log(add(2, 3));
+
+const addShorter = a => a + 4;
+
+console.log(addShorter(2, 3));
+```
+
 ````
 
 <v-click at="+1">
@@ -302,3 +304,8 @@ Les tableaux en JavaScript stockent des collections d'éléments sous une même 
 * Fonctions Traditionnelles : Déclarations hoistées, utilisables avant leur définition.
 * Arrow Functions : Doivent être déclarées avant utilisation, pas de hoisting.
 </v-click>
+
+---
+
+# Sommaire
+<Toc minDepth="1" maxDepth="2"></Toc>
