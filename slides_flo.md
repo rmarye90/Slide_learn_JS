@@ -1,13 +1,9 @@
 ---
-author: Florian Beaumont
 layout: center
 highlighter: shiki
 css: unocss
 colorSchema: dark
 transition: fade-out
-mdc: true
-drawings:
-  persist: false
 fonts:
   sans: Roboto
   serif: Roboto Slab
