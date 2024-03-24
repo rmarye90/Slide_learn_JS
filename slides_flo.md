@@ -78,41 +78,65 @@ title: Variables, Types de Données, et Opérations
 ---
 
 <div grid="~ flex-start">
-
-# Variables et Constantes
-<div class="inline-block">
-    <span v-mark.strike-through.red>`var`</span>, <span v-mark.circle.teal>`let` et `const`</span>
+<div text-2xl origin-top-left transition duration-500 :class="$clicks < 1 ? 'scale-150' : 'op50'">
+Variables et Constantes
+</div>
+<div class="inline-block py-4 tracking-widest">
+    <span v-mark.strike-through.red origin-top-left transition duration-500 :class="$clicks < 2 ? '' : 'op50 text-red-300'">`var`</span>, <span v-mark.box.teal  origin-top-left transition duration-500 :class="$clicks < 3 ? '' : 'op50'">`let` et `const`</span>
 </div>
 
+<div class="w-0.25 h-40 bg-white absolute left-40 top-40" v-click="3" />
+<div class="inline-block" w-60>
 ```js {monaco-run}
 let x = 42;
 console.log(x);
 ```
 </div>
 
-<p v-click="'+1'">Pourquoi ?</p>
-<img v-click="'+1'" src="/assets/images/ManonSofaWellness.jpg" class="m-auto h-60 rounded shadow" />
+</div>
+
+<h3 v-click="'+1'" class="text-center py-4">Pourquoi ?</h3>
+<img v-click="'+1'" src="/assets/images/ManonSofaWellness.jpg" class="absolute right-20 h-60 rounded shadow" />
 
 ---
 title: var exemple #1 
 transition: fade-out
 ---
 
+<div class="~ grid grid-cols-2 gap-4">
+
+<div>
+
 # Un peu d'explication #1:
 
-<div  v-mark="{at: 1, color: 'teal', type: 'highlight'}">var: peut être re-déclarée et mise à jour</div>
-<div v-click="2" v-mark="{at: 2, color: 'teal', type: 'highlight'}">let et const : peut être mise à jour mais <span v-mark="{at: 2, color: '#BE4165', type: 'strike-through'}">pas re-déclarée</span></div>
+<div><span class="color-teal">var</span> : <span :class="$clicks < 2 ? '' : 'op50'">peut être re-déclarée et mise à jour</span></div>
+<div v-click="2"><span class="color-teal">let</span> : <span :class="$clicks < 4 ? '' : 'op50'">peut être mise à jour mais <span v-mark="{at: 3, color: '#BE4165', type: 'strike-through'}">pas re-déclarée</span></span></div>
+<div v-click="4"><span class="color-teal">const</span> : ne peut ni <span v-mark="{at: 5, color: '#BE4165', type: 'strike-through'}">être mise à jour</span> ni <span v-mark="{at: 5, color: '#BE4165', type: 'strike-through'}">etre re-déclarée</span></div>
 
-```js {monaco-run}
+</div>
+
+<div class="col-start-2">
+
+
+```js {monaco-run} {autorun:false}
 var greeting = "Hello";
 var greeting = "Bonjour"; // Re-déclaration valide
-console.log(greeting); // "Bonjour"
 
-// let et const: peuvent être mise à jour mais pas re-déclarées
+// let peut être mise à jour mais pas re-déclaré
 let greeting2 = "Hello";
-//let greeting2 = "Hola";
+//let greeting2 = "Bonjour";
 greeting2 = "Bonjour"; 
+
+// const ne peut ni être mis à jour ni re-déclaré
+const greeting3 = "Hello";
+//const greeting3 = "Bonjour";
+greeting3 = "Bonjour";
+
+console.log(greeting); // "Bonjour"
 ```
+
+</div>
+</div>
 ---
 title: var exemple #2
 transition: fade-out
@@ -158,9 +182,10 @@ title: var exemple #3
 transition: fade-out
 ---
 
-# Un peu d'explication #3:
+# Hoisting
 
-<div v-click="0" v-mark="{at: 1, color: 'teal', type: 'highlight'}">Le Hoisting</div>
+<div v-click="0" v-mark="{at: 1, color: 'teal', type: 'highlight'}" class="w-24">Le Hoisting</div>
+<Arrow v-bind="{ x1:10, y1:150, x2:50, y2:150 }" />
 ```js {monaco-run}
 console.log(a); // var a; 
 var a = 3;
@@ -201,6 +226,9 @@ title: functions
 
 # Les fonctions
 
+<div class="grid grid-cols-2 gap-2">
+    <div>
+    
 ````md magic-move
 ```js {hide|1-3|7-10|all}{lines:true}
 function add(a, b) {
@@ -242,19 +270,14 @@ console.log(addShorter(2, 3));
 
 ````
 
-<v-click at="+1">
+</div>
+<div v-click="6" mt--12>
+    <h3>A quoi sert la fonction ?</h3>
+    <p class="op50">Les fonctions nous aident à réutiliser des morceaux de code sans avoir à le réécrire.
+    Il y a différentes manières d'écrire des fonctions, mais elles visent toutes à accomplir une tâche.</p>
+</div>
 
-<br />
-
-#### Ce qu'il faut retenir :
-
-Les fonctions nous aident à réutiliser des morceaux de code sans avoir à le réécrire.
-Il y a différentes manières d'écrire des fonctions, mais elles visent toutes à accomplir une tâche.
-
-</v-click>
-
-
-<br />
+</div>
 
 ---
 title: Les tableaux
