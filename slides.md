@@ -56,6 +56,8 @@ On peut stocker plusieurs types de données dans une variable:
 <span v-click="1" class=" text-gray-500 italic">// mais qu'une donnée pars variable. </span>
 </div>
 
+<div class="grid grid-cols-3 gap-4 text-center pt-8">
+<div>
 <div v-click="2">
 <p class="text-#a3e635"> Les nombres: </p>
 </div>
@@ -68,7 +70,9 @@ const c = -320;
 const d = 1/3;
 ```
 </div>
+</div>
 
+<div>
 <div v-click="4">
 <p class="text-#a3e635" > Les chaines de caractères: </p>
 </div>
@@ -82,7 +86,9 @@ const a = "Ce n'est pas une chaine de caractères";
 const b = 'Ce n\'est pas une chaine de caractères';
 ```
 </div>
+</div>
 
+<div>
 <div v-click="6">
 <p class="text-#a3e635" > Les booléens: </p>
 </div>
@@ -93,9 +99,9 @@ const b = 'Ce n\'est pas une chaine de caractères';
 let is_connected = true;
 let not_connected = false;
 ```
-
 </div>
-
+</div>
+</div>
 ---
 
 <div>
