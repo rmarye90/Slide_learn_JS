@@ -50,6 +50,10 @@ let a = "Je suis une chaine maintenant";
 <p class="text-center text-#e11d48 text-5xl">Les bonnes pratiques</p>
 <div v-click="1" class="text-sm font-serif pb-5 text-center text-xl">Pour nomer ses variables </div>
 
+<div v-click="2">
+<span class="text-#f0abfc text-1xl">rules 1:</span> <span class="font-serif text-sm">Clarté! </span>
+</div>
+
 
 
 ---
