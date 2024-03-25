@@ -46,6 +46,26 @@ let a = "Je suis une chaine maintenant";
 </div>
 ---
 
+<p class="text-center text-#e11d48 text-5xl pb-5">Hoisting</p>
+<div v-click="1" class="text-sm font-serif pb-5"> Cette mécanique consiste à faire "virtuellement" remonter la déclaration d'une variable (ou d'une fonction) tout au haut du code lors de l'analyse du code par le moteur</div>
+
+<div v-click="2" class="text-sm font-serif bg-#323232 border-l-4 border-#0ea5e9 size-w-160"> Mais attention, il ne remonte que la déclaration, et non l'initialisation, la valeur de la variable sera alors mise à "undefined". </div>
+
+<div v-click="3" pt-8>
+
+```js {monaco-run}
+console.log(a); // var a; 
+var a = 3;
+
+let b = 3;
+
+const c = 3;
+```
+
+</div>
+
+---
+
 <div>
 <p class="text-center text-#e11d48 text-5xl">Les types de variables</p>
 </div>
