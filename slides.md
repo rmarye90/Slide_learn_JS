@@ -44,12 +44,20 @@ let a = "2";
 let a = "Je suis une chaine maintenant";
 ```
 </div>
+
+---
+
+<p class="text-center text-#e11d48 text-5xl">Les bonnes pratiques</p>
+<div v-click="1" class="text-sm font-serif pb-5 text-center text-xl">Pour nomer ses variables </div>
+
+
+
 ---
 
 <p class="text-center text-#e11d48 text-5xl pb-5">Hoisting</p>
 <div v-click="1" class="text-sm font-serif pb-5"> Cette mécanique consiste à faire "virtuellement" remonter la déclaration d'une variable (ou d'une fonction) tout au haut du code lors de l'analyse du code par le moteur</div>
 
-<div v-click="2" class="text-sm font-serif bg-#323232 border-l-4 border-#0ea5e9 size-w-160"> Mais attention, il ne remonte que la déclaration, et non l'initialisation, la valeur de la variable sera alors mise à "undefined". </div>
+<div v-click="2" class="rounded-sm p-1.5 text-sm font-serif bg-#323232 border-l-4 border-#0ea5e9 size-w-160"> Mais attention, il ne remonte que la déclaration, et non l'initialisation, la valeur de la variable sera alors mise à "undefined". </div>
 
 <div v-click="3" pt-8>
 
