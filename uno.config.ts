@@ -21,6 +21,12 @@ import {
             'primary':'#7A78F3',
             'secondary':'#434268',
             'accent':'#9272A8',
+        },
+        'status': {
+            'success':'#22ce55',
+            'info':'#3b82f6',
+            'warning':'#f59e0b',
+            'danger':'#ef4444',
         }
       }
     },

@@ -49,11 +49,31 @@ let a = "Je suis une chaine maintenant";
 
 <h1 class="text-title-color">Les bonnes pratiques</h1>
 <h2 v-click="1" class="pb-5 text-center">Pour nomer ses variables </h2>
+<p class="font-serif"> Un nommage adéquat est sans doute la source première de la lisibilité. Pourtant cet aspect du code est souvent à tort considéré comme secondaire et même négligé.</p>
 
 <div v-click="2">
-<span class="text-span-primary text-2xl">rules 1: </span> <span class="font-serif text-sm"> Des noms descriptifs et explicites.</span>
+<span class="text-span-primary text-2xl">Un nom claire et precis</span>
+<p></p>
 <div class="font-serif text-span-accent">
 ex: 
+</div>
+
+<div class="grid grid-cols-2 gap-4 text-center">
+<div>
+<p>Mauvais nommage</p>
+
+```js
+let d = new Date();
+```
+</div>
+<div>
+<p>Bon nommage</p>
+
+```js
+let currentDate = new Date();
+````
+
+</div>
 </div>
 </div>
 
