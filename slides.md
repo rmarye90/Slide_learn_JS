@@ -11,7 +11,7 @@ fonts:
 ---
 
 <div v-click="1">
-<p class="text-center text-#e11d48 text-7xl">Les Variables</p>
+<p class="text-center text-title-color text-7xl">Les Variables</p>
 </div>
 <div v-click="2">
 C'est ce qui va nous permettre de stocker une données!
@@ -19,7 +19,7 @@ C'est ce qui va nous permettre de stocker une données!
 
 ---
 
-<p class="text-center text-#e11d48 text-5xl pb-8"> Declarer une variable</p>
+<h1 class="pb-8">Declarer une variable</h1>
 
 <div v-click="1" class="pb-8">
 <span class="text-#c026d3 text-2xl">CONST:</span> <span class="font-serif text-1xl"> ne peut se voir réassigner une valeur. Permet d'éviter des erreurs en s'assurent, que si on utilise </span> <span class="text-#c026d3 text-2xl"> const</span>, <span class="font-serif text-1xl">la variable ne sera pas écrasée par la suite.</span> 
@@ -47,21 +47,23 @@ let a = "Je suis une chaine maintenant";
 
 ---
 
-<p class="text-center text-#e11d48 text-5xl">Les bonnes pratiques</p>
-<div v-click="1" class="text-sm font-serif pb-5 text-center text-xl">Pour nomer ses variables </div>
+<h1>Les bonnes pratiques</h1>
+<h2 v-click="1" class="pb-5 text-center">Pour nomer ses variables </h2>
 
 <div v-click="2">
-<span class="text-#f0abfc text-1xl">rules 1:</span> <span class="font-serif text-sm">Clarté! </span>
+<span class="text-#f0abfc text-1xl">rules 1: </span> <span class="font-serif text-sm"> Des noms descriptifs et explicites.</span>
+<div class="font-serif text-sm text-#a855f7">
+ex: 
 </div>
-
+</div>
 
 
 ---
 
-<p class="text-center text-#e11d48 text-5xl pb-5">Hoisting</p>
+<h1 class="pb-5">Hoisting</h1>
 <div v-click="1" class="text-sm font-serif pb-5"> Cette mécanique consiste à faire "virtuellement" remonter la déclaration d'une variable (ou d'une fonction) tout au haut du code lors de l'analyse du code par le moteur</div>
 
-<div v-click="2" class="rounded-sm p-1.5 text-sm font-serif bg-#323232 border-l-4 border-#0ea5e9 size-w-160"> Mais attention, il ne remonte que la déclaration, et non l'initialisation, la valeur de la variable sera alors mise à "undefined". </div>
+<div v-click="2" class="quote size-w-160 font-serif"> Mais attention, il ne remonte que la déclaration, et non l'initialisation, la valeur de la variable sera alors mise à "undefined". </div>
 
 <div v-click="3" pt-8>
 
@@ -79,14 +81,14 @@ const c = 3;
 ---
 
 <div>
-<p class="text-center text-#e11d48 text-5xl">Les types de variables</p>
+<h1>Les types de variables</h1>
 </div>
 
-<div v-click="1" class="text-center">
+<p v-click="1" class="quote size-w-150 font-serif pb-5">
 On peut stocker plusieurs types de données dans une variable:
 <br>
 <span v-click="1" class=" text-gray-500 italic">// mais qu'une donnée pars variable. </span>
-</div>
+</p>
 
 <div class="grid grid-cols-3 gap-4 text-center pt-8">
 <div>

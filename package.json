@@ -8,13 +8,16 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.48.3",
+    "@slidev/cli": "^0.48.7",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "vue": "^3.4.21"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
     "prettier": "^3.2.5",
-    "prettier-plugin-slidev": "^1.0.5"
+    "prettier-plugin-slidev": "^1.0.5",
+    "tailwindcss": "^3.4.3"
   }
 }
