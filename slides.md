@@ -19,18 +19,18 @@ C'est ce qui va nous permettre de stocker une données!
 
 ---
 
-<h1 class="pb-8">Declarer une variable</h1>
+<h1 class="text-title-color pb-8">Declarer une variable</h1>
 
 <div v-click="1" class="pb-8">
-<span class="text-#c026d3 text-2xl">CONST:</span> <span class="font-serif text-1xl"> ne peut se voir réassigner une valeur. Permet d'éviter des erreurs en s'assurent, que si on utilise </span> <span class="text-#c026d3 text-2xl"> const</span>, <span class="font-serif text-1xl">la variable ne sera pas écrasée par la suite.</span> 
+<span class="text-span-primary text-2xl">CONST:</span> <span class="font-serif text-1xl"> ne peut se voir réassigner une valeur. Permet d'éviter des erreurs en s'assurent, que si on utilise </span> <span class="text-span-primary text-2xl"> const</span>, <span class="font-serif text-1xl">la variable ne sera pas écrasée par la suite.</span> 
 </div>
 
 <div v-click="2" class="pb-8">
-<span class="text-#c026d3 text-2xl">LET:</span><span class="font-serif text-1xl"> peut être mise à jour mais pas re-déclarée</span>
+<span class="text-span-primary text-2xl">LET:</span><span class="font-serif text-1xl"> peut être mise à jour mais pas re-déclarée</span>
 </div>
 
 <div v-click="3" class="pb-8">
-<span v-mark="{at: 4, color: '#e11d48', type: 'strike-through'}" class="text-#c026d3 text-2xl">VAR:</span><span class="font-serif text-1xl"> peut être mise à jour et re-déclarée </span>
+<span v-mark="{at: 4, color: '#e11d48', type: 'strike-through'}" class="text-span-primary text-2xl">VAR:</span><span class="font-serif text-1xl"> peut être mise à jour et re-déclarée </span>
 <span v-click="4" class=" text-gray-500 italic">// ne s'utilise plus </span>
 </div> 
 
@@ -47,12 +47,12 @@ let a = "Je suis une chaine maintenant";
 
 ---
 
-<h1>Les bonnes pratiques</h1>
+<h1 class="text-title-color">Les bonnes pratiques</h1>
 <h2 v-click="1" class="pb-5 text-center">Pour nomer ses variables </h2>
 
 <div v-click="2">
-<span class="text-#f0abfc text-1xl">rules 1: </span> <span class="font-serif text-sm"> Des noms descriptifs et explicites.</span>
-<div class="font-serif text-sm text-#a855f7">
+<span class="text-span-primary text-2xl">rules 1: </span> <span class="font-serif text-sm"> Des noms descriptifs et explicites.</span>
+<div class="font-serif text-span-accent">
 ex: 
 </div>
 </div>
@@ -60,7 +60,7 @@ ex:
 
 ---
 
-<h1 class="pb-5">Hoisting</h1>
+<h1 class="text-title-color pb-5">Hoisting</h1>
 <div v-click="1" class="text-sm font-serif pb-5"> Cette mécanique consiste à faire "virtuellement" remonter la déclaration d'une variable (ou d'une fonction) tout au haut du code lors de l'analyse du code par le moteur</div>
 
 <div v-click="2" class="quote size-w-160 font-serif"> Mais attention, il ne remonte que la déclaration, et non l'initialisation, la valeur de la variable sera alors mise à "undefined". </div>
@@ -81,7 +81,7 @@ const c = 3;
 ---
 
 <div>
-<h1>Les types de variables</h1>
+<h1 class="text-title-color">Les types de variables</h1>
 </div>
 
 <p v-click="1" class="quote size-w-150 font-serif pb-5">
@@ -93,7 +93,7 @@ On peut stocker plusieurs types de données dans une variable:
 <div class="grid grid-cols-3 gap-4 text-center pt-8">
 <div>
 <div v-click="2">
-<p class="text-#a3e635"> Les nombres: </p>
+<p class="text-span-primary"> Les nombres: </p>
 </div>
 
 <div v-click="3">
@@ -108,7 +108,7 @@ const d = 1/3;
 
 <div>
 <div v-click="4">
-<p class="text-#a3e635" > Les chaines de caractères: </p>
+<p class="text-span-primary" > Les chaines de caractères: </p>
 </div>
 
 <div v-click="5">
@@ -124,7 +124,7 @@ const b = 'Ce n\'est pas une chaine de caractères';
 
 <div>
 <div v-click="6">
-<p class="text-#a3e635" > Les booléens: </p>
+<p class="text-span-primary" > Les booléens: </p>
 </div>
 
 <div v-click="7">
@@ -139,7 +139,7 @@ let not_connected = false;
 ---
 
 <div>
-<p class="text-#a3e635" > Les tableaux: </p>
+<p class="text-span-primary" > Les tableaux: </p>
 <p v-click="1" class="font-serif text-sm"> Celle ci peut contenir plusieurs données</p>
 </div>
 

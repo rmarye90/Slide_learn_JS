@@ -1,12 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --slidev-code-padding: 8px 10px;
   --slidev-code-background: #1616164f !important;
-  --slidev-border-quote-color: #0ea5e9;
-  --slidev-quote-background: #323232;
 }
 
 .slidev-layout code {
@@ -15,7 +9,6 @@
 
 h1 {
   font-size: 3.5rem !important;
-  color: var(--slidev-title-color);
   text-align: center;
 }
 

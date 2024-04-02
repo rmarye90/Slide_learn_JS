@@ -17,7 +17,11 @@ import {
     theme: {
       colors: {
         'title-color': '#e11d48',
-        'accent': 'yellow',
+        'span': {
+            'primary':'#7A78F3',
+            'secondary':'#434268',
+            'accent':'#9272A8',
+        }
       }
     },
     presets: [
