@@ -48,35 +48,72 @@ let a = "Je suis une chaine maintenant";
 ---
 
 <h1 class="text-title-color">Les bonnes pratiques</h1>
-<h2 v-click="1" class="pb-5 text-center">Pour nomer ses variables </h2>
+<h2 class="pb-5 text-center">Pour nomer ses variables </h2>
 <p class="font-serif"> Un nommage adéquat est sans doute la source première de la lisibilité. Pourtant cet aspect du code est souvent à tort considéré comme secondaire et même négligé.</p>
 
-<div v-click="2">
-<span class="text-span-primary text-2xl">Un nom claire et precis</span>
-<p></p>
-<div class="font-serif text-span-accent">
-ex: 
-</div>
+<div>
 
 <div class="grid grid-cols-2 gap-4 text-center">
 <div>
-<p>Mauvais nommage</p>
+<p class="text-status-danger">Mauvais nommage</p>
 
+````md magic-move 
 ```js
 let d = new Date();
+let usrCnt = 10;
 ```
+```js
+let status = 'available'; // Ceci pourrait être interprété comme un booléen
+```
+```js
+let open = true;
+```
+```js
+let arr = ['pommes', 'bananes', 'cerises'];
+```
+```js
+function processData(data) {
+}
+function get_data_from_server() {
+}
+function user(data) {
+  // code pour créer un utilisateur
+}
+```
+````
+
 </div>
 <div>
-<p>Bon nommage</p>
+<p class="text-status-success">Bon nommage</p>
 
+````md magic-move
 ```js
 let currentDate = new Date();
+let userCount = 10;
+```
+```js
+let statusMessage = 'available';
+```
+```js
+let isModalOpen = true;
+```
+```js
+let fruitList = ['pommes', 'bananes', 'cerises'];
+```
+```js
+function formatUserDetails(userDetails) {
+}
+function getDataFromServer() {
+}
+function createUser(userData) {
+  // code pour créer un utilisateur
+}
+```
 ````
 
 </div>
 </div>
 </div>
-
 
 ---
 
